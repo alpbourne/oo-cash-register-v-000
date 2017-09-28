@@ -1,7 +1,6 @@
 class CashRegister
 
-  attr_accessor :total, :employee_discount
-  attr_reader :items
+  attr_accessor :total, :employee_discount, :current_total
 
   def initialize(employee_discount = 0)
     @total = 0
@@ -10,12 +9,9 @@ class CashRegister
   end
 
   def add_item (title, price, quantity = 1)
-    @total += price * quantity
+    self.total += price * quantity
+    @items << self.total
     @last = price * quantity
-    quanity.times do
-      @items << title
-    end
-    @items
   end
 
 
