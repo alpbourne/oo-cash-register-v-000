@@ -20,6 +20,7 @@ class CashRegister
 
   def apply_discount
     @discounted_total = @total * (0.8)
+    @discounted_total = @discounted_total.to_i
     if @employee_discount > 0
       "After the discount, the total comes to #{@discounted_total}."
     else
