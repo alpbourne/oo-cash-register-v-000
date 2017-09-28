@@ -1,6 +1,6 @@
 class CashRegister
 
-  attr_accessor :total, :employee_discount, :items, :apply_discount, :discounted_total
+  attr_accessor :total, :employee_discount, :items, :apply_discount, :discounted_total, :last_transaction
 
   def initialize(employee_discount = 0)
     @employee_discount = employee_discount
