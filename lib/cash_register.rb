@@ -3,8 +3,7 @@ class CashRegister
   attr_accessor :total, :employee_discount, :current_total
 
   def initialize(employee_discount = 0)
-    total = 0
-    @total = total
+    @total = 0
     @employee_discount = employee_discount
     @current_total = []
   end
